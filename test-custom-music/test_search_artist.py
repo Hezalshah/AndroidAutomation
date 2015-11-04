@@ -24,8 +24,9 @@ class TestSearchArtist(unittest.TestCase):
          time.sleep(10)
          self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/zipcode_promt_edit_text').send_keys('10013')
          self.driver.find_element_by_name('Set Location').click()
+         self.driver.find_element_by_name('Log In').click()
 
-         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/login_gate_log_in').click()
+         #self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/login_gate_log_in').click()
          #enter email
          self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/email').send_keys('android7@mailinator.com')
          #enter password

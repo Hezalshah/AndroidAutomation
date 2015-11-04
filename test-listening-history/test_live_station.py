@@ -30,7 +30,7 @@ class TestLiveStation(unittest.TestCase):
         # select Login
         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/login_gate_log_in').click()
         # enter email
-        self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/email').send_keys('android12@mailinator.com')
+        self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/email').send_keys('android14@mailinator.com')
         # enter password
         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/password').send_keys('tester')
         # submit form

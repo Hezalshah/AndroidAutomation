@@ -3,6 +3,7 @@ __author__ = '1111376'
 import unittest
 from appium import webdriver
 import time
+from nose.tools import assert_equals
 from os.path import expanduser
 
 class TestCustomStation(unittest.TestCase):
@@ -25,7 +26,7 @@ class TestCustomStation(unittest.TestCase):
          self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/zipcode_promt_edit_text').send_keys('10013')
          self.driver.find_element_by_name('Set Location').click()
 
-         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/login_gate_log_in').click()
+         self.driver.find_element_by_name('Log In').click()
          #enter email
          self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/email').send_keys('android7@mailinator.com')
          #enter password
@@ -34,8 +35,6 @@ class TestCustomStation(unittest.TestCase):
          time.sleep(5)
 
          #search the artist
-
-
          self.driver.find_element_by_name("Navigate up").click()
          self.driver.find_element_by_name('Artist Radio').click()
          time.sleep(2)
@@ -57,6 +56,7 @@ class TestCustomStation(unittest.TestCase):
          # Thumb down playing
          self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/button_player_thumbdown').click()
          time.sleep(2)
+
          self.driver.find_element_by_name('GOT IT').click()
          time.sleep(2)
 
@@ -64,9 +64,17 @@ class TestCustomStation(unittest.TestCase):
          self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/button_player_thumbup').click()
          time.sleep(2)
 
+        # verify instructional text displays
+        #el = self.driver.find_element_by_xpath('//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.widget.FrameLayout[1]/android.widget.FrameLayout[2]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.ImageView[1]')
+        # assert_equals(el.text, 'Great, we'll play you more songs like this.')
+
          # Favoriting the station
          self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/button_player_favorite').click()
          time.sleep(2)
+
+          # verify instructional text displays
+        # el = self.driver.find_element_by_xpath('//android.widget.FrameLayout[1]/android.widget.FrameLayout[1]')
+        # assert_equals(el.text, 'Favorite station added')
 
          self.driver.execute_script("mobile: tap", {"tapCount": 1, "touchCount": 1, "duration": 0.5612890625, "x": 218, "y": 410})
 

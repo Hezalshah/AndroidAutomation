@@ -35,7 +35,7 @@ class TestUnfavoriteCustom(unittest.TestCase):
         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/password').send_keys('tester')
         # submit form
         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/email_login').click()
-        time.sleep(2)
+        time.sleep(10)
 
         # search: Ariana
         self.driver.find_element_by_xpath('//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[1]/android.view.View[1]/android.support.v7.widget.LinearLayoutCompat[1]/android.widget.TextView[1]').click()
@@ -56,7 +56,9 @@ class TestUnfavoriteCustom(unittest.TestCase):
         self.driver.find_element_by_name("Navigate up").click()
         self.driver.find_element_by_name("MY STATIONS").click()
         time.sleep(2)
-        self.driver.find_element_by_xpath('//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.FrameLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]').click()
+        self.driver.execute_script("mobile: tap", {"tapCount": 1, "touchCount": 1, "duration":  0.634765625, "x": 1032, "y": 847})
+
+       # self.driver.find_element_by_xpath('//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.RelativeLayout[1]/android.widget.FrameLayout[2]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v4.view.ViewPager[1]/android.widget.FrameLayout[1]/android.widget.ListView[1]/android.widget.LinearLayout[2]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.ImageView[1]').click()
         time.sleep(2)
         self.driver.find_element_by_name('Unfavorite').click()
         time.sleep(2)

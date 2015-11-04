@@ -48,12 +48,10 @@ class TestGenreGameStartUpFlow(unittest.TestCase):
         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/sign_up').click()
         time.sleep(3)
         # select 2 genres
-        self.driver.find_element_by_name('Top 40 & Pop').click()
-        self.driver.find_element_by_name('Classic Rock').click()
+       # self.driver.find_element_by_name('Top 40 & Pop').click()
+       # self.driver.find_element_by_name('Classic Rock').click()
         #tap Done
-        self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/done_btn').click()
-
-        time.sleep(2)
+        #self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/done_btn').click()
 
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestGenreGameStartUpFlow)

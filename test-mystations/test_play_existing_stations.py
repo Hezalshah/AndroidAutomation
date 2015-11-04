@@ -35,7 +35,7 @@ class TestPlayExistingStation(unittest.TestCase):
         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/password').send_keys('tester')
         # submit form
         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/email_login').click()
-        time.sleep(2)
+        time.sleep(20)
 
         #play existing live station
         self.driver.find_element_by_name("MY STATIONS").click()

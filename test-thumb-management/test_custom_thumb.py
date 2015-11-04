@@ -37,7 +37,7 @@ class TestCustomStation(unittest.TestCase):
         # submit form
         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/email_login').click()
 
-        time.sleep(2)
+        time.sleep(5)
 
         self.driver.find_element_by_name("Navigate up").click()
         self.driver.find_element_by_name('Listening History').click()

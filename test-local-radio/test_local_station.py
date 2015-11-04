@@ -73,7 +73,7 @@ class TestLocalRadio(unittest.TestCase):
         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/button_player_favorite').click()
         time.sleep(2)
 
-        self.driver.execute_script("mobile: tap", {"tapCount": 1, "touchCount": 1, "duration": 0.7, "x": 174, "y": 1046})
+        self.driver.execute_script("mobile: tap", {"tapCount": 1, "touchCount": 1, "duration": 0.5612890625, "x": 218, "y": 410})
 
          #Unfavorite the station
         self.driver.find_element_by_id('com.clearchannel.iheartradio.controller:id/button_player_favorite').click()
@@ -82,4 +82,4 @@ class TestLocalRadio(unittest.TestCase):
 if __name__ == '__main__':
     suite = unittest.TestLoader().loadTestsFromTestCase(TestLocalRadio)
     unittest.TextTestRunner(verbosity=2).run(suite)
-__author__ = '1111376'
+
